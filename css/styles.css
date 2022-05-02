@@ -675,6 +675,60 @@ h5 {
   background: none;
 }
 
+.profile {
+  padding: 3em;
+}
+
+.profile .header {
+  position: relative;
+  border: 2px solid black;
+  display: -ms-grid;
+  display: grid;
+  background-color: white;
+  -ms-grid-columns: (minmax(20em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin: auto;
+}
+
+.profile .header .header-one {
+  text-align: center;
+}
+
+.profile .header .header-one img {
+  width: 12em;
+}
+
+.profile .header .header-two {
+  text-align: left;
+}
+
+.profile .header .header-three {
+  text-align: center;
+}
+
+.profile .header .header-three .socials {
+  margin: 2em auto 0 0;
+}
+
+.profile .header .header-three .followers-following {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile .header .header-three .followers-following .followers, .profile .header .header-three .followers-following .following {
+  margin: 0 1em;
+  background: black;
+  width: 10em;
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
 footer {
   display: -ms-grid;
   display: grid;
