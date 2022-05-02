@@ -675,6 +675,15 @@ h5 {
   background: none;
 }
 
+.logOut {
+  text-align: right;
+  padding-right: 5em;
+}
+
+.logOut:hover {
+  cursor: pointer;
+}
+
 .profile {
   padding: 3em;
 }
@@ -685,9 +694,9 @@ h5 {
   display: grid;
   -ms-grid-columns: (minmax(20em, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  padding-top: 2em;
   padding-bottom: 2em;
   margin: auto;
+  border-bottom: 2px solid black;
 }
 
 .profile .header .header-one {
@@ -733,7 +742,6 @@ h5 {
 
 .profile .uploads h2 {
   text-align: center;
-  border-top: 2px solid black;
 }
 
 .profile .uploads .grid-uploads {

@@ -36,3 +36,10 @@ function store(event) {
     }
   }
   submitBtn.addEventListener('click', store);
+
+  var logOutBtn = document.querySelector('.logOut');
+  function logOut() {
+    localStorage.clear();
+    window.location.href = '/pages/index.html';
+  }
+  logOutBtn.addEventListener('click', logOut);

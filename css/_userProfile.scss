@@ -1,3 +1,12 @@
+.logOut {
+  text-align: right;
+  padding-right: 5em;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .profile {
   padding: 3em;
   
@@ -5,9 +14,9 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-    padding-top: 2em;
     padding-bottom: 2em;
     margin: auto;
+    border-bottom: 2px solid black;
 
     .header-one {
       text-align: center;
@@ -47,7 +56,6 @@
 
     h2 {
       text-align: center;
-      border-top: 2px solid black;
     }
 
     .grid-uploads {
