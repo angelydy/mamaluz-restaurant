@@ -3,9 +3,7 @@
   
   .header {
     position: relative;
-    border: 2px solid black;
     display: grid;
-    background-color: white;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     padding-top: 2em;
     padding-bottom: 2em;
@@ -37,8 +35,31 @@
           background: black;
           width: 10em;
           color: white;
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
+        }
+      }
+    }
+  }
+
+  .uploads {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: auto;
+
+    h2 {
+      text-align: center;
+      border-top: 2px solid black;
+    }
+
+    .grid-uploads {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+      grid-gap: 1em;
+      padding-left: 2em;
+      padding-right: 2em;
+
+      .uploads {
+        img {
+          width: 100%;
         }
       }
     }
