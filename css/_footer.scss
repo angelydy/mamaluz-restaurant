@@ -1,0 +1,56 @@
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  background: white;
+  padding: 2em;
+  border-top: 2px solid black;
+
+  .grid-one {
+    .socials img{
+      margin: 0 1em 0 0;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: .2s ease-in-out;
+        color: #008000;
+      }
+    }
+  }
+
+  .grid-two, .grid-three {
+    a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .grid-four {
+    .download {
+      display: flex;
+
+      div {
+        margin: 1em auto 0 0;
+        border: 2px solid black;
+        box-shadow: 9px 9px 0px 0 black;
+        display: flex;
+        justify-content: center;
+        width: 8em;
+
+        &:hover {
+          transition: .2s ease-in-out;
+          transform: scale(1.05);
+          cursor: pointer;
+          box-shadow: none;
+          border: #008000 2px solid;
+          box-shadow: 9px 9px 0px 0 #008000;
+          color: #008000;
+        }
+      }
+    }
+  }
+}
