@@ -11,7 +11,7 @@ function removeLogInBtn() {
 
     //creates and add profile button to navbar of all html pages
     var profile = document.createElement('li');
-    profile.innerHTML = '<a href="/userProfile/user.html">Profile</a>';
+    profile.innerHTML = '<a href="/pages/user.html">Profile</a>';
     profile.className = 'navlink';
     var navbar = document.getElementById('navbar');
     navbar.appendChild(profile);

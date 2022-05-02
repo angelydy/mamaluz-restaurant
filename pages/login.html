@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="shortcut icon" href="/icons8-kitchenwares-16.png">
+  <link rel="shortcut icon" href="/logo.png">
   <script src="/index.js" defer></script>
-  <title>MamaLuz | About</title>
+  <title>MamaLuz | Kusina Ni Inday</title>
 </head>
 <body>
   <nav>
@@ -15,12 +15,12 @@
       <a href="/index.html"><img src="https://img.icons8.com/pastel-glyph/32/000000/kitchenwares--v1.png"/>
         MamaLuz</a>
     </div>
-    <div class="navlinks">
-      <ul id="navbar">
+    <div class="navlinks" id="navbar">
+      <ul>
         <li class="navlink"><a href="/index.html">Home</a></li>
-        <li class="navlink active"><a href="/about/about.html">About</a></li>
-        <li class="navlink"><a href="/contact/contact.html">Contact</a></li>
-        <li class="navlink" id="login"><a href="/login/login.html">Sign In</a></li>
+        <li class="navlink"><a href="/pages/about.html">About</a></li>
+        <li class="navlink"><a href="/pages/contact.html">Contact</a></li>
+        <li class="navlink active" id="login"><a href="/pages/login.html">Sign In</a></li>
       </ul>
     </div>
     <div class="nav-icons">
@@ -29,36 +29,37 @@
     </div>
   </nav>
 
-  <section class="section-two">
-    <div class="left-about">
-      <img src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
-    </div>
-    <div class="right-about">
-      <h1>About</h1>
-      <p>Luz is a housewife who loves to cook and try out new things. 
-        Then years later, we've decided to develop the MamaLuz app which contains the daily menu, diets and cooking tips, as well as Q&A's and Latest Videos. Everything you can find in your house: recipes and shopping lists, diet viewer so that you can count calories, and articles where you can find household tips or new ideas for recipes. Bring home the taste and quality you want! We only use the best ingredient to make sure our product arrives fresh to your home every day.</p>
-    </div>
-  </section>
+  <div class="bg">
+    <img src="/images/undraw_personal_info_re_ur1n.svg" alt="" class="scribble1">
+  </div>
+  
 
-  <section class="section-two">
-    <div class="left-mission">
-      <h1>Mission</h1>
-      <p> We are a family-owned business that seeks to bring you the best of what nature has to offer. Our products are made in the purest form, using the most natural ingredients, with minimal processing 
-        and zero artificial ingredients. Our mission is to bring quality foods without breaking your pocket.</p>
-    </div>
-    <div class="right-mission">
-      <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=722&q=80" alt="">
-    </div>
-  </section>
-
-  <section class="section-two">
-    <div class="left-about">
-      <img src="https://images.unsplash.com/photo-1586511925558-a4c6376fe65f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
-    </div>
-    <div class="right-about">
-      <h1>Vision</h1>
-      <p> We believe that access to food should not be a luxury that is reserved for the few, but rather a fundamental right of every citizen. And we are passionate about changing the way restaurants work. This means offering an innovative dining experience, 
-        operating as a sustainable business and creating an opportunity for everyone to connect with food and each other in a new way.</p>
+  <section class="signIn" id="signIn">
+    <div class="login-container">
+      <h2>User Login</h2>
+      <p>
+        Welcome Back! Please enter your 
+        <br>
+        details to login your account.
+      </p>
+      <form action="post">
+        <div class="form-group">
+          <input type="email" name="" id="email" class="form-control" placeholder="Enter Email" 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="" id="password" class="form-control" placeholder="Enter Password" 
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+          <p style="text-decoration: underline; cursor: pointer;">Forgot Password?</p>
+          <h6 style="font-size: 0.8em;">No Account? Download and Sign Up
+            <br>
+            using the app.</h6>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" id="submitBtn">Sign In</button>
+        </div>
+      </form>
     </div>
   </section>
 
