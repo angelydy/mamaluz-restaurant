@@ -2,9 +2,10 @@ var submitBtn = document.getElementById('submitBtn');
 var email = document.getElementById('email');
 var passw = document.getElementById('password')
 const signInPage = document.getElementById('signIn')
+var logOutBtn = document.getElementById('signOut')
 
 function removeLogInBtn() {
-  if (localStorage.getItem('email') !== null && localStorage.getItem('password') !== null) {
+  if (localStorage.getItem('email') && localStorage.getItem('password')) {
     //remove sign in button in navbar
     var signIn = document.getElementById('login');
     signIn.style.display = 'none';
@@ -17,29 +18,22 @@ function removeLogInBtn() {
     navbar.appendChild(profile);
   }
 }
-removeLogInBtn();
+removeLogInBtn()
 
-function store(event) {
-  event.preventDefault();
-
+function store() {
+  //adding value to local storage
   localStorage.setItem('email', email.value);
   localStorage.setItem('password', passw.value);
-  var useremail = localStorage.getItem('email');
-  var userpass = localStorage.getItem('password');
   
+  //checking if the local storage have value
   if (email.value && passw.value) {
-    if (useremail == email.value && userpass == passw.value) {
-      setTimeout(function() {
-        window.location.href = '/userProfile/user.html';
-        }, 1000);
+    if (localStorage.getItem('email') && localStorage.getItem('password')) {
+      window.location.href = '/pages/user.html';
       }
     }
   }
   submitBtn.addEventListener('click', store);
+  
+  
 
-  var logOutBtn = document.querySelector('.logOut');
-  function logOut() {
-    localStorage.clear();
-    window.location.href = '/pages/index.html';
-  }
-  logOutBtn.addEventListener('click', logOut);
+
