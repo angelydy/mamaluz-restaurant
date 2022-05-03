@@ -5,20 +5,17 @@ const signInPage = document.getElementById('signIn')
 var logOutBtn = document.getElementById('signOut')
 
 function removeLogInBtn() {
-  if (localStorage.getItem('email') && localStorage.getItem('password')) {
-    //remove sign in button in navbar
-    var signIn = document.getElementById('login');
-    signIn.style.display = 'none';
+  var signIn = document.getElementById('login');
+  signIn.style.display = 'none';
 
-    //creates and add profile button to navbar of all html pages
-    var profile = document.createElement('li');
-    profile.innerHTML = '<a href="/pages/user.html">Profile</a>';
-    profile.className = 'navlink';
-    var navbar = document.getElementById('navbar');
-    navbar.appendChild(profile);
-  }
+  //creates and add profile button to navbar of all html pages
+  var profile = document.createElement('li');
+  profile.innerHTML = '<a href="/pages/user.html">Profile</a>';
+  profile.className = 'navlink';
+  var navbar = document.getElementById('navbar');
+  navbar.appendChild(profile);
 }
-removeLogInBtn();
+removeLogInBtn()
 
 function store(event) {
   event.preventDefault();
