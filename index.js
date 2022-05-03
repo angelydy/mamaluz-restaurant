@@ -18,22 +18,22 @@ function removeLogInBtn() {
     navbar.appendChild(profile);
   }
 }
-removeLogInBtn()
+removeLogInBtn();
 
-function store() {
-  //adding value to local storage
+function store(event) {
+  event.preventDefault();
   localStorage.setItem('email', email.value);
   localStorage.setItem('password', passw.value);
-  window.location.href = '/pages/user.html';
+  var useremail = localStorage.getItem('email');
+  var userpass = localStorage.getItem('password');
   
-  //checking if the local storage have value
   if (email.value && passw.value) {
-    if (localStorage.getItem('email') && localStorage.getItem('password')) {
+    if (useremail == email.value && userpass == passw.value) {
+      setTimeout(function() {
+        window.location.href = '/pages/user.html';
+        }, 1000);
       }
     }
   }
   submitBtn.addEventListener('click', store);
-  
-  
-
 
