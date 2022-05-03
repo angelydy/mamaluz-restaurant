@@ -1,11 +1,12 @@
 var submitBtn = document.getElementById('submitBtn');
 var email = document.getElementById('email');
 var passw = document.getElementById('password')
-const signInPage = document.getElementById('signIn')
 var logOutBtn = document.getElementById('signOut')
+var isLocalSto = false;
+const signInPage = document.getElementById('signIn')
 
 function removeLogInBtn() {
-  if (localStorage.getItem('email') && localStorage.getItem('password')) {
+  if (isLocalSto) {
   var signIn = document.getElementById('login');
   signIn.style.display = 'none';
 
@@ -28,6 +29,7 @@ function store(event) {
   
   if (email.value && passw.value) {
     if (useremail == email.value && userpass == passw.value) {
+      isLocalSto = true;
       setTimeout(function() {
         window.location.href = '/pages/user.html';
         }, 1000);
