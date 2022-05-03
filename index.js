@@ -24,13 +24,7 @@ function store() {
   //adding value to local storage
   localStorage.setItem('email', email.value);
   localStorage.setItem('password', passw.value);
-  
-  //checking if the local storage have value
-  if (email.value && passw.value) {
-    if (localStorage.getItem('email') && localStorage.getItem('password')) {
-      window.location.href = '/pages/user.html';
-      }
-    }
+  window.location.href = '/pages/user.html';
   }
   submitBtn.addEventListener('click', store);
   
