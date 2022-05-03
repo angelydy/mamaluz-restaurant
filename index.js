@@ -5,6 +5,7 @@ const signInPage = document.getElementById('signIn')
 var logOutBtn = document.getElementById('signOut')
 
 function removeLogInBtn() {
+  if (localStorage.getItem('email') && localStorage.getItem('password')) {
   var signIn = document.getElementById('login');
   signIn.style.display = 'none';
 
@@ -14,6 +15,7 @@ function removeLogInBtn() {
   profile.className = 'navlink';
   var navbar = document.getElementById('navbar');
   navbar.appendChild(profile);
+  }
 }
 removeLogInBtn()
 

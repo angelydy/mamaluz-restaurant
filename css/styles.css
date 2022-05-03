@@ -686,6 +686,8 @@ h5 {
 
 .profile {
   padding: 3em;
+  -webkit-animation: fromTop 1s ease;
+          animation: fromTop 1s ease;
 }
 
 .profile .header {
