@@ -25,6 +25,12 @@ function store() {
   localStorage.setItem('email', email.value);
   localStorage.setItem('password', passw.value);
   window.location.href = '/pages/user.html';
+  
+  //checking if the local storage have value
+  if (email.value && passw.value) {
+    if (localStorage.getItem('email') && localStorage.getItem('password')) {
+      }
+    }
   }
   submitBtn.addEventListener('click', store);
   
